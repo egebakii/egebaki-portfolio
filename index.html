@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Ege Baki – Online Kartvizit</title>
+  <meta name="description" content="Merhaba, ben Ege. Görselleri harekete geçiriyor, onlara hikâye katıyorum. Animasyon ve motion design ile projeleri daha yaratıcı, daha akılda kalıcı hale getiriyorum."/>
+  <meta property="og:title" content="Ege Baki – Online Kartvizit"/>
+  <meta property="og:description" content="Animasyon ve motion design ile projeleri daha yaratıcı, akılda kalıcı hale getiriyorum."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="tr_TR"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg-start: #1a1f3c;
+      --bg-end:   #3a1a5d;
+      --card-bg:  rgba(24,24,34,0.92);
+      --text:     #f1f2f8;
+      --muted:    #a4a8c4;
+      --link:     #aab7ff;
+      --ring:     rgba(141,141,241,0.55);
+      --shadow:   0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+
+    body{
+      margin:0;
+      font-family: "Inter", system-ui, sans-serif;
+      color:var(--text);
+      background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+      display:grid;
+      place-items:center;
+      padding: 24px;
+    }
+
+    .card{
+      width:min(92vw, 720px);
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 4vw, 44px);
+      animation: fadeIn 700ms ease-out both;
+    }
+
+    .header{
+      display:flex;
+      align-items:center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .avatar{
+      width:72px; height:72px;
+      border-radius:50%;
+      display:grid; place-items:center;
+      font-weight:700; font-size:26px;
+      color:#fff;
+      background: conic-gradient(from 220deg, #3d66ff, #864aff, #3d66ff);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+      border: 2px solid rgba(255,255,255,0.4);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    h1{
+      font-size: clamp(26px, 4.6vw, 40px);
+      margin:0 0 6px 0;
+    }
+    .tagline{
+      margin:0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .bio{
+      margin: 16px 0 0 0;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .links{ 
+      margin-top: 24px;
+      display:flex; 
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px; 
+    }
+
+    .btn{
+      background: rgba(255,255,255,0.08);
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight: 600;
+      transition: transform .18s ease, box-shadow .18s ease;
+      min-width: 160px;
+    }
+    .btn i{ font-size:18px; }
+
+    .btn:hover{
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 10px 26px rgba(0,0,0,.4);
+    }
+
+    .fineprint{
+      margin-top: 20px;
+      font-size: 12.5px; color: var(--muted);
+      text-align:center;
+    }
+
+    @keyframes fadeIn{ from{ opacity:0; transform: translateY(8px);} to{ opacity:1; transform:none;} }
+    @keyframes float{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-4px);} }
+
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <header class="header">
+      <div class="avatar" aria-hidden="true">EB</div>
+      <div>
+        <h1>Ege Baki</h1>
+        <p class="tagline">Motion Designer • 2D Animasyon</p>
+      </div>
+    </header>
+
+    <p class="bio">
+      Merhaba, ben Ege. Görselleri harekete geçiriyor, onlara hikâye katıyorum.
+      Animasyon ve motion design ile projeleri daha yaratıcı, daha akılda kalıcı hale getiriyorum.
+    </p>
+
+    <section class="links" aria-label="Sosyal bağlantılar">
+      <a class="btn" href="https://vimeo.com/user171605442" target="_blank" rel="noopener">
+        <i class="fa-brands fa-vimeo"></i> Vimeo
+      </a>
+      <a class="btn" href="https://www.behance.net/egebaki" target="_blank" rel="noopener">
+        <i class="fa-brands fa-behance"></i> Behance
+      </a>
+      <a class="btn" href="https://youtu.be/-kTWF0lAauU" target="_blank" rel="noopener">
+        <i class="fa-brands fa-youtube"></i> Showreel
+      </a>
+      <a class="btn" href="https://www.instagram.com/ae.ege/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+      <a class="btn" href="mailto:egebaki.aep@gmail.com">
+        <i class="fa-solid fa-envelope"></i> Mail
+      </a>
+    </section>
+
+    <p class="fineprint">© 2025 Ege Baki</p>
+  </main>
+</body>
+</html>
